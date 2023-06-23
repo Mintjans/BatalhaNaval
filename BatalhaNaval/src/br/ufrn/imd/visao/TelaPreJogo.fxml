@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPre" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="/BatalhaNaval/src/br.ufrn.imd.controle.TelaPreJogoController.java">
+   <children>
+      <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" layoutX="100.0" layoutY="50.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #0085ff;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="submarino" fitHeight="30.0" fitWidth="98.0" onMouseClicked="if (event.isSecondaryButtonDown()) {            rotacionar(submarino, jogador.getEmbarcacoes().get(1), jogador);            }" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../include/Submarino.png" />
+               </image></ImageView>
+            <ImageView fx:id="fragueta" fitHeight="36.0" fitWidth="121.0" onMouseClicked="if (event.isSecondaryButtonDown()) {            rotacionar(fragata, jogador.getEmbarcacoes().get(2), jogador);            }" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../include/Fragueta.png" />
+               </image></ImageView>
+            <ImageView fx:id="destroyer" fitHeight="41.0" fitWidth="150.0" onMouseClicked="if (event.isSecondaryButtonDown()) {            rotacionar(destroyer, jogador.getEmbarcacoes().get(3), jogador);            }" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../include/Destroyer.png" />
+               </image></ImageView>
+            <ImageView fx:id="corveta" fitHeight="30.0" fitWidth="102.0" onMouseClicked="if (event.isSecondaryButtonDown()) {            rotacionar(corveta, jogador.getEmbarcacoes().get(0), jogador);            }" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../include/Corveta.png" />
+               </image></ImageView>
+         </children>
+      </GridPane>
+      <Button fx:id="confirmar" layoutX="194.0" layoutY="410.0" mnemonicParsing="false" onAction="#iniciarJogo" prefHeight="57.0" prefWidth="112.0" text="Confirmar" />
+      <Text layoutX="121.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posicione seus navios">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

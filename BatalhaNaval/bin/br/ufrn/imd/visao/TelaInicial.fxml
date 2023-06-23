@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorIni" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.controle.TelaInicialController">
+   <children>
+      <GridPane minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="57.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="376.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="51.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="402.0" minHeight="10.0" prefHeight="394.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane alignment="CENTER" prefHeight="394.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="buttonSolo" alignment="CENTER" mnemonicParsing="false" onAction="#abrirTelaPreJogo" prefHeight="50.0" prefWidth="250.0" text="Solo" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonMult" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#abrirTelaPreJogoMult" prefHeight="50.0" prefWidth="250.0" text="Multiplayer" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonSair" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Sair" prefHeight="50.0" prefWidth="250.0" text="Sair" textAlignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" prefHeight="88.0" prefWidth="156.0" text="(Em breve)" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="75.0" right="75.0" />
+               </GridPane.margin>
+            </GridPane>
+            <Text cache="true" stroke="TRANSPARENT" strokeType="OUTSIDE" strokeWidth="0.0" text="Batalha Naval" textAlignment="JUSTIFY" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold Italic" size="48.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
